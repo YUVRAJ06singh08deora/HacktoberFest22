@@ -1,0 +1,93 @@
+body {
+    background-color: #16191b;
+}
+
+p {
+    color: white;
+}
+
+.logo {
+    height: 200px;
+}
+
+.cu1 {
+  scroll-behavior: smooth;
+  border-radius: 25px;
+  border: 2px solid #29A19C;
+  padding: 20px; 
+  width: 80px;
+  height: 15px; 
+  position: absolute;
+  right:400px;
+  top: 0px;
+}
+
+.cu2 {
+    scroll-behavior: smooth;
+    border-radius: 25px;
+    border: 2px solid #29A19C;
+    padding: 20px; 
+    width: 80px;
+    height: 15px; 
+    position: absolute;
+    left: 600px;
+    top: 0px;
+  }
+
+  .cu3 {
+    scroll-behavior: smooth;
+    border-radius: 25px;
+    border: 2px solid #29A19C;
+    padding: 20px; 
+    width: 80px;
+    height: 15px; 
+    position: absolute;
+    right: 260px;
+    top: 0px;
+  }
+
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #29A19C;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: #A3F7BF;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  #contactus {
+    height: 370px;
+    color: #29A19C;
+    background-color: #232323;
+  }
+  
+  #about {
+    height: 180px;
+    color: #29A19C;
+    background-color: #232323;
+  }
+
+  .row1{
+    display: block;
+    position: relative;
+    height: 350px;
+    margin: 40px;
+  }
+  

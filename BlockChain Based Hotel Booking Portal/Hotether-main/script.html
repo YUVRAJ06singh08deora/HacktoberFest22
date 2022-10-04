@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotether</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+   <img class="logo" src="logo.png">
+<div class="main">
+   <p class="cu1"><a href="#contactus">contact us</a></p>
+   <p class="cu2"><a href="#about">about</a></p>
+   <p class="cu3"><a href="#roomNumber">for manager</a></p>
+</div>
+<div>
+	<p style="text-align:center;">Users can check in by confirming the type of room they want. Note that each room costs 1 ETH!</p>
+	<input type = "text" placeholder="Address(HexaDecimal)" id = "occupant" style="background-color:white;margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">
+   <p id = 'Occupant'></p>
+   <input type = "number" placeholder="Room Number" id = "roomNumber" style="background-color:white;margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">
+   <p id = 'Rooms'></p>
+   <button id="checkin" style="background-color:rgb(23, 207, 239);margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%"> Check In </button>
+   <br>
+   <br>
+   <br>
+   <br>
+</div>
+<div>
+	<p style="text-align:center;">Only hotel manager Can access these buttons !</p>
+   <input type = "number" placeholder="Room Capacity" id = "roomCapacity" style="background-color:white;margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:-20%">
+   <p id = 'Capacity'></p>
+   <button id ='addRoom' style="background-color:rgb(23, 207, 239);margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%">Add Room</button>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div class="space">
+</div>
+
+<div>
+   <input type = "number" placeholder="Enter 0-vac or 1-occ" id = "occupancyStatus" style="background-color:white;margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">
+   <p id = 'Status'></p>
+	<input type = "number" placeholder="Room Number" id = "roomNumber" style="background-color:white;margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">
+	<p id = 'Room'></p>
+   <button id="ChangeRoomOccupancyStatus" style="background-color:rgb(23, 207, 239);margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">Change Room's Occupancy Status</button>
+   <br>
+   <br>
+   <br>
+   <br>
+</div>
+
+
+
+<div>
+	<input type = "text" placeholder="Address of new owner" id = "newOwner" style="background-color:white;margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">
+	<p id = 'Owner'></p>
+   <button id="transferOwnership" style="background-color:rgb(23, 207, 239);margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">Transfer Ownership</button>
+   <br>
+   <br>
+   <br>
+   <br>
+</div>
+
+<div class="main" id="about">
+	<h2>about</h2>
+	<p>This project effectively stores the booking data on the blockchain network nowadays we see many hotel manager doing some fraud with the</p>
+	<p>databases containing booking details and manipulating it for their own good and sometimes the booking details are even modified when</p>
+	<p>someone gives bribes to the Hotel staff so that they can modify the previously existing data, So to keep all the data secure and transparent we</p>
+	<p>have created a whole Hotel booking management system on the blockchain network where it can be kept safe and it cannot be manipulated.</p>
+  </div>
+
+  
+ <table>
+    <tr>
+       <td><img class="row1" src="images/LOUIS.jpeg">
+       <td><img class="row1" src="images/Exterior.jpeg" alt=""></td>
+       <td><img class="row1" src="images/BedRoom.jpeg" alt=""></td>
+	   <td><img class="row1" src="images/Bathroom.jpeg"></td>
+       <td><img class="row1" src="images/Dinning.jpeg" alt=""></td>
+       <td><img class="row1" src="images/chill.jpeg" alt=""></td>
+    </tr>
+ </table>
+
+	 <div class="main" id="contactus">
+		<h2>Contact us</h2>
+		<ul>numbers
+			<li>123456789</li>
+			<li>987654321</li>
+		</ul>
+   
+	  <form action="mailto:gauridhamale@gmail.com" method="post" enctype="text/plain">
+		 <label>Your Name:</label>
+		 <input type="text" name="yourName" value=""><br>
+		 <label>Your Email:</label>
+		 <input type="email" name="yourEmail" value=""><br>
+		 <label>Your Message:</label><br>
+		 <textarea name="yourMessage" rows="10" cols="30"></textarea><br>
+		 <input type="submit" name="">
+	 </form>
+   
+	  </div>
+
+   </div>
+   
+   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.0/web3.min.js" integrity="sha512-0/nXBDmnbXRIkGvwIK2UWg4F8xscIFZHGl2sWevr6f0DnFEqZh4uTw78qLQYC16tVxbbHhoaaZLSBoIopZQucg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   
+   <script>
+      var contract;
+      $(document).ready(function(){
+         web3 = new Web3(web3.currentProvider);
+   
+         var address = "0x1906752a6741cdE2f961D7Cb2095b33B77d3b60B";
+         var abi = [
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getRoom",
+		"outputs": [
+			{
+				"components": [
+					{
+						"name": "capacity",
+						"type": "uint256"
+					},
+					{
+						"name": "numOccupants",
+						"type": "uint256"
+					},
+					{
+						"name": "occupied",
+						"type": "bool"
+					},
+					{
+						"name": "condition",
+						"type": "uint8"
+					},
+					{
+						"name": "occupier",
+						"type": "address"
+					}
+				],
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "rooms",
+		"outputs": [
+			{
+				"name": "capacity",
+				"type": "uint256"
+			},
+			{
+				"name": "numOccupants",
+				"type": "uint256"
+			},
+			{
+				"name": "occupied",
+				"type": "bool"
+			},
+			{
+				"name": "condition",
+				"type": "uint8"
+			},
+			{
+				"name": "occupier",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "numRooms",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "roomCapacity",
+				"type": "uint256"
+			}
+		],
+		"name": "addRoom",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "RoomStatus",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "occupant",
+				"type": "address"
+			},
+			{
+				"name": "roomNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "checkin",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "occupancyStatus",
+				"type": "uint8"
+			},
+			{
+				"name": "roomNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "ChangeRoomOccupancyStatus",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "Location",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "cleaner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "HotelName",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "Customer",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "transfer",
+		"type": "event"
+	}
+];
+         contract = new web3.eth.Contract(abi, address);
+		 
+         $('#addRoom').click(function(){
+            console.log("addRoom");
+           var roomCapacity = parseInt($('#roomCapacity').val());
+		
+         //   contract.methods.addRoom(roomCapacity).send({from: web3.eth.defaultAccount, gas: 3000000});
+           web3.eth.requestAccounts().then(function(accounts){
+                           var acc = accounts[0];
+                           return contract.methods.addRoom(roomCapacity).send({from: acc, gas: 3000000});
+                       }).then(function(tx){
+                           console.log(tx);
+                       }).catch(function(tx){
+                           console.log(tx);
+                       })
+         });
+		 $('#ChangeRoomOccupancyStatus').click(function(){
+			console.log("ChangeRoomOccupancyStatus");
+			var occupancyStatus = parseInt($('#occupancyStatus').val());
+			var roomNumber = parseInt($('#roomNumber').val());
+
+			web3.eth.requestAccounts().then(function(accounts){
+                           var acc = accounts[0];
+                           return contract.methods.ChangeRoomOccupancyStatus(occupancyStatus, roomNumber).send({from: acc, gas: 3000000});
+						   
+                       }).then(function(tx){
+                           console.log(tx);
+                       }).catch(function(tx){
+                           console.log(tx);
+                       })
+         });
+
+		 $('#transferOwnership').click(function(){
+            console.log("transferOwnership");
+           var roomCapacity = $('#newOwner').val();
+		
+           web3.eth.requestAccounts().then(function(accounts){
+                           var acc = accounts[0];
+                           return contract.methods.transferOwnership(newOwner).send({from: acc, gas: 3000000});
+                       }).then(function(tx){
+                           console.log(tx);
+                       }).catch(function(tx){
+                           console.log(tx);
+                       })
+         });
+
+		 $('#checkin').click(function(){
+			console.log("checkin");
+			var occupancyStatus = parseInt($('#occupant').val());
+			var roomNumber = parseInt($('#roomNumber').val());
+
+			web3.eth.requestAccounts().then(function(accounts){
+                           var acc = accounts[0];
+                           return contract.methods.ChangeRoomOccupancyStatus(occupant, roomNumber).send({from: acc, gas: 3000000});
+						   
+                       }).then(function(tx){
+                           console.log(tx);
+                       }).catch(function(tx){
+                           console.log(tx);
+                       })
+         });
+		 
+		 });
+   </script>
+
+
+
+
+
+</body>
+
+</html>
