@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>FoodiesHub|Home</title>
+</head>
+
+<body style="background-color:rgb(255, 255, 255);">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #752727;">
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" style="color:blanchedalmond;">
+                    <img src="logo.png" alt="" width="30" height="24"
+                        class="d-inline-block align-top">
+                    FoodiesHub
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link active" aria-current="page" href="index.html"
+                            style="color: blanchedalmond;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" style="color: blanchedalmond;">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="contact.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" style="color: blanchedalmond;">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#"><strong> Snacks</strong></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Pizza</a></li>
+                            <li><a class="dropdown-item" href="#">Burger</a></li>
+                            <li><a class="dropdown-item" href="#">French Fries</a></li>
+                            <li><a class="dropdown-item" href="#">Pav bhaji</a></li>
+                            <li><a class="dropdown-item" href="#">Samosa</a></li>
+                            <li><a class="dropdown-item" href="#">Panipuri</a></li>
+                            <li><a class="dropdown-item" href="#">Dosa</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><strong>Juices & Drinks</strong></a></li>
+                            <li><a class="dropdown-item" href="#">Coffee</a></li>
+                            <li><a class="dropdown-item" href="#">Cold coffee</a></li>
+                            <li><a class="dropdown-item" href="#">Tea</a></li>
+                            <li><a class="dropdown-item" href="#">Green Tea</a></li>
+                            <li><a class="dropdown-item" href="#">Orange Juice</a></li>
+                            <li><a class="dropdown-item" href="#">Apple Juice</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="contact.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" style="color: blanchedalmond;">
+                            Contact Us!
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="contact.html">Feedback</a></li>
+                            <li><a class="dropdown-item" href="contact.html">FAQs</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+            <div>
+                <button class="btn btn-light mx-2" data-bs-toggle="modal"
+                    data-bs-target="#LoginModal">Login/SignUp</button>
+
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="LoginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">I am not a robot.</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">LogIn</button>
+                    </form>
+                    <p>Create new account? <button type="button" class="w-100 btn btn-lg btn-outline-primary"
+                            data-bs-toggle="modal" data-bs-target="#signupModal">Sign up for free</button></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--SignUp Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I agree the Terms&Conditions.</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- order Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ordermodalModalLabel">Order Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="item" class="form-label">Items</label>
+                            <input type="text" class="form-control" id="item" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Quantity" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="Quantity">
+                        </div>
+                        <div class="mb-3">
+                            <label for="number" class="form-label">Phone Number</label>
+                            <input type="number" class="form-control" id="number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address">
+                        </div>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-primary" data-bs-toggle="modal"
+                            data-bs-target="#payModal">Pay Now</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- pay Modal -->
+    <div class="modal fade" id="payModal" tabindex="-1" aria-labelledby="payModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymodalModalLabel">Payment Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="Card-Number" class="form-label">Card Number</label>
+                            <input type="number" class="form-control" id="Card-Number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="expiry" class="form-label">Expiration Date</label>
+                            <input type="date" class="form-control" id="expiry">
+                        </div>
+                        <div class="mb-3">
+                            <label for="CVV" class="form-label">CVV</label>
+                            <input type="number" class="form-control" id="CVV">
+                        </div>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-primary" data-bs-toggle="modal"
+                            data-bs-target="#payModal">Pay Now</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="container my-4"><br>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner carousel-fade">
+              <div class="carousel-item active carousel-fade">
+                <img src="1.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3 style="color: black;">Foodies Hub</h3>
+                  <p style="color: black;">Unleash the cravings..</p>
+                </div>
+              </div>
+              <div class="carousel-item carousel-fade">
+                <img src="2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3 style="color:black;">For the hungrier you!</h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="carousel-item carousel-fade">
+                <img src="3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>Quality and Taste</h3>
+                  <p>Hygienic Fresh and Yummy.</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+    </div>
+    <br>
+    <div class="container">
+        <h2 style="font-size: 65px; padding-bottom: 20px; padding-top: 30px;"><span class="we-are"
+                style="text-align: center;">We are <br></span>Foodies <span>Hub</span></h2>
+
+        <h2>Our luscious products that make you crave...</h2>
+    </div>
+    <div class="container marketing">
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider" style="color: #752727; ">
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h3 class="featurette-heading"> Cheezy Italian Pizza </h3>
+
+                <p class="lead">Pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with
+                    some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other
+                    ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a
+                    very high temperature—and served hot.
+                </p>
+
+            </div>
+            <div class="col-md-5">
+                <img src="pizza.jpg"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="...">
+
+
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <p class="card-text-price my-2" style="text-align: left;">₹300/-</p>
+                <button type="button" class="btn btn-danger container-fluidr" data-bs-toggle="modal"
+                    data-bs-target="#orderModal">Order Now</button>
+            </div>
+
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Pav Bhaji </h2>
+                <p class="lead">A delicious blend of mix veggies cooked in butter&spices, served with soft butter tasted
+                    buns. Pav is an Indian bread and bhaji is mashed vegetables cooked with spice powder.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="pavbhaji.jpeg"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="...">
+
+            </div>
+
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <p class="card-text-price my-2" style="text-align: left;">₹300/-</p>
+            <button type="button" class="btn btn-danger container-fluidr" data-bs-toggle="modal"
+                data-bs-target="#orderModal">Order Now</button>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Noodles </h2>
+                <p class="lead">A noodle is a piece of pasta, especially a long, skinny one. You can eat noodles with
+                    butter and cheese or sauce, or slurp them from a bowl of soup. Noodles are cut or rolled from a
+                    dough that contains some kind of flour — wheat, buckwheat, and rice flour are all commonly used.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="noodles.jpeg"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="...">
+
+            </div>
+
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <p class="card-text-price my-2" style="text-align: left;">₹300/-</p>
+            <button type="button" class="btn btn-danger container-fluidr" data-bs-toggle="modal"
+                data-bs-target="#orderModal">Order Noww</button>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Burger</h2>
+                <p class="lead">A burger is a sandwich consisting of one or more cooked patties of ground meat, usually
+                    beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame
+                    broiled. A hamburger topped with cheese is called a cheeseburger.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="burger.jpeg"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="...">
+
+            </div>
+
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <p class="card-text-price my-2" style="text-align: left;">₹300/-</p>
+            <button type="button" class="btn btn-danger container-fluidr" data-bs-toggle="modal"
+                data-bs-target="#orderModal">Order Now</button>
+        </div>
+        <hr class="featurette-divider">
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">French fries </h2>
+                <p class="lead">French fry, a crunchy exterior and a light, fluffy interior.Thinly sliced potatoes are
+                    deep-fried till they're crisp on all sides and then sprinkled with salt, pepper or really any
+                    seasoning of your choice.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="fries.jpeg"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="...">
+
+            </div>
+
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <p class="card-text-price my-2" style="text-align: left;">₹300/-</p>
+            <button type="button" class="btn btn-danger container-fluidr" data-bs-toggle="modal"
+                data-bs-target="#orderModal">Order Now</button>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Crispy Chicken Nuggets</h2>
+                <p class="lead">A chicken nugget is a chicken product made from chicken meat that is breaded or
+                    battered, then deep-fried or baked. Invented in the 1950s, chicken nuggets have become a popular
+                    fast food restaurant item, as well as widely sold frozen for home use.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="nuggets.jpeg"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="...">
+
+            </div>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <p class="card-text-price my-2" style="text-align: left;">₹300/-</p>
+            <button type="button" class="btn btn-danger container-fluidr" data-bs-toggle="modal"
+                data-bs-target="#orderModal">Order Now</button>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Chicken lollipop </h2>
+                <p class="lead">Chicken lollipop is an hors d'oeuvre popular in Indo-Chinese cuisine. Chicken lollipop
+                    is, essentially a frenched chicken winglet, wherein the meat is cut loose from the bone end and
+                    pushed down creating a lollipop appearance. It is usually served hot with Szechuan sauce.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="lollipop.jpeg"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="...">
+
+            </div>
+
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <p class="card-text-price my-2" style="text-align: left;">₹300/-</p>
+            <button type="button" class="btn btn-danger container-fluidr" data-bs-toggle="modal"
+                data-bs-target="#orderModal">Order Now</button>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+    </div>
+    <br>
+    <div class="container">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h3 class="display-4">Plans for you...</h3>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 fw-normal">Free</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Exclusive festive offers</li>
+                            <li>Free delivery on first order</li>
+                            <li>Email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-danger" data-bs-toggle="modal"
+                            data-bs-target="#signupModal">Sign up for free</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 fw-normal">Foodie</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Special Birthday offers</li>
+                            <li>Free delivery on all orders</li>
+                            <li>Priority email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-danger">Get started</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 fw-normal">Enterprise</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Up for partnership and collabs</li>
+                            <li>Trainings for staff</li>
+                            <li>Phone and email support</li>
+                            <li>Help center access</li>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-danger">Contact us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2011-2021 FoodiesHub, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+-->
+</body>
+
+</html>
